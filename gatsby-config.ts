@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
       name: 'content',
       path: './src/content'
     }
-  }]
+  }, 'gatsby-transformer-remark']
 }
 
 export default config
