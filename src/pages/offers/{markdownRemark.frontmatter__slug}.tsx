@@ -1,9 +1,16 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 
-export default ({
-  data // this prop will be injected by the GraphQL query below.
-}) => {
+type DataProps = {
+  markdownRemark: {
+    frontmatter: {
+      title: string,
+      date: any
+    },
+    html: any
+  },
+}
+const offer = ({ data }: PageProps<DataProps>) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
@@ -18,7 +25,7 @@ export default ({
     </div>
   )
 }
-
+export default offer
 export const pageQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
