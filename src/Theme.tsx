@@ -1,20 +1,23 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
-
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import inter from './assets/Inter/Inter.ttf'
 const theme = {
   colors: {
-    powderWhite: '#FFFDF9',
-    persianGreen: '#06B49A',
-    lightBlue: '#AFDBD2',
-    onyx: '#36313D'
-  },
-  fonts: ['sans-serif', 'Roboto'],
-  fontSizes: {
-    small: '1em',
-    medium: '2em',
-    large: '3em'
+    yellow: '#EDAA25',
+    black: '#1E1E1E'
   }
 }
+export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: inter;
+    src: url(${inter}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  html {
+    font-size: 24px;
+  }
+`
 
 const Theme = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>

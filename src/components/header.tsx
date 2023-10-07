@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 const Container = styled.div`
     display: flex;
     justify-content: center;
+    font-family: Inter;
 `
 
 const Nav = styled.nav`
@@ -13,7 +14,7 @@ const Nav = styled.nav`
   width: 90%;
   text-align: center;
   padding: 10px 10px 0;
-  border-bottom: solid;
+  border-bottom:${props => `1px solid ${props.theme.colors.yellow}`} ;
 `
 const Links = styled.ul`
 `
@@ -23,6 +24,7 @@ const StyledLi = styled.li`
 `
 const StyledLink = styled(Link)`
   text-decoration: none;
+  color: ${props => props.theme.colors.yellow};
 `
 const Header = () => {
   return (
