@@ -5,7 +5,6 @@ type DataProps = {
   markdownRemark: {
     frontmatter: {
       title: string,
-      date: any
     },
     html: any
   },
@@ -17,7 +16,6 @@ const offer = ({ data }: PageProps<DataProps>) => {
     <div>
       <div>
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
         <div
           dangerouslySetInnerHTML={{ __html: html }}
         />
@@ -31,7 +29,6 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         slug
         title
       }
