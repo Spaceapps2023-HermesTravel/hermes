@@ -1,5 +1,5 @@
 import * as React from 'react'
-import type {HeadFC, PageProps } from 'gatsby'
+import type { HeadFC, PageProps } from 'gatsby'
 import Header from '../components/header';
 
 const IndexPage: React.FC<PageProps> = () => {
