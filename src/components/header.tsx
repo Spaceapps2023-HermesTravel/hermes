@@ -16,8 +16,6 @@ const Nav = styled.nav`
   padding: 10px 10px 0;
   border-bottom:${props => `1px solid ${props.theme.colors.yellow}`} ;
 `
-const Links = styled.ul`
-`
 const StyledLi = styled.li`
   display: inline-block;
   padding: 10px 20px 0 10px;
@@ -30,12 +28,12 @@ const Header = () => {
   return (
         <Container>
             <Nav>
-                <Links>
+                <ul>
                     <StyledLi><StyledLink to={'/'}>Home</StyledLink></StyledLi>
                     <StyledLi><StyledLink to={'/offers/'}>Tours</StyledLink></StyledLi>
                     <StyledLi><StyledLink to={'/handbook/'}>Handbook</StyledLink></StyledLi>
                     <StyledLi><StyledLink to={'/about/'}>About</StyledLink></StyledLi>
-                </Links>
+                </ul>
             </Nav>
         </Container>
   )

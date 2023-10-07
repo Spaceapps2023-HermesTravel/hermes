@@ -13,6 +13,23 @@ const BackgroundImage = styled.img`
   
   width: 100%;
 `
+
+const HeadlineContainer = styled.div`
+  text-align: right;
+  color: ${props => props.theme.colors.yellow};
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+`
+const Subheadline = styled.h2`
+  font-family: Inter;
+`
+const Headline = styled.h1`
+  display: block;
+  
+  font-family: ron;
+  
+`
 const IndexPage: React.FC<PageProps> = () => {
   return (
         <Theme>
@@ -20,6 +37,15 @@ const IndexPage: React.FC<PageProps> = () => {
             <Header/>
             <main>
                 <BackgroundImage src={imageBg}/>
+                <HeadlineContainer>
+                    <Subheadline>
+                       FROM OUTER SPACE TO OLIMPUS
+                    </Subheadline>
+                    <Headline>
+                       HERMES
+                    </Headline>
+                </HeadlineContainer>
+
             </main>
         </Theme>
   )
